@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SILOKERNF &#8211; Kelola Mitra</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../css/horizontal-layout/style.css">
+    <script src="../js/custom.js"></script>
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_horizontal-navbar.html -->
+        <div class="horizontal-menu">
+            <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+                <div class="container">
+                    <div class="navbar-menu-wrapper d-flex align-items-stretch justify-content-between">
+                        <ul class="navbar-nav mr-lg-2 d-none d-lg-flex">
+                            <li class="nav-item nav-search d-none d-lg-flex">
+                                <form action="search.html" method="get">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="search">
+                                                <i class="mdi mdi-magnify"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" name="keyword" class="form-control" placeholder="Search"
+                                            aria-label="search" aria-describedby="search">
+                                        <input type="submit" style="display: none;">
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                            <h3 class="font-weight-bold text-white mb-0">SILOKERNF</h3>
+                        </div>
+                        <ul class="navbar-nav ml-lg-5 navbar-nav-right">
+                            <li class="nav-item nav-profile dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                                <img src="../images/faces/admin_icon.png" alt="profile">
+                                <span class="nav-profile-name">Admin</span>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                                <a href="../index.html" class="dropdown-item">
+                                  <i class="mdi mdi-logout text-primary"></i>
+                                  Logout
+                                </a>
+                              </div>
+                            </li>
+                            <li class="nav-item nav-toggler-item-right d-lg-none">
+                              <button class="navbar-toggler align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+                                <span class="mdi mdi-menu"></span>
+                              </button>
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+            </nav>
+            <nav class="bottom-navbar">
+                <div class="container">
+                    <ul class="nav page-navigation">
+                        <li class="nav-item">
+                          <a class="nav-link h-100" href="index.html">
+                            <span class="menu-title">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link h-100" href="admin-kelola-loker.html">
+                        <span class="menu-title">Kelola Loker</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link h-100" href="admin-kelola-mitra.html">
+                    <span class="menu-title">Kelola Mitra</span>
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link h-100" href="form-berita.html">
+                <span class="menu-title">Kelola Berita</span>
+            </a>
+        </li>
+    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-12">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb bg-white">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Kelola Mitra</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="text-center text-black mb-4 mt-2">Kelola Mitra</h2>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="table-responsive">
+                                                <div id="order-listing_wrapper"
+                                                    class="dataTables_wrapper dt-bootstrap4 no-footer">
+
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table id="order-listing" class="table dataTable no-footer"
+                                                                role="grid" aria-describedby="order-listing_info">
+                                                                <thead>
+                                                                    <tr role="row">
+                                                                        <th class="sorting_asc" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1" aria-sort="ascending"
+                                                                            aria-label="Order #: activate to sort column descending"
+                                                                            style="width: 65px;">No</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1"
+                                                                            aria-label="Customer: activate to sort column ascending"
+                                                                            style="width: 83px;">Nama Perusahaan</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1"
+                                                                            aria-label="Customer: activate to sort column ascending"
+                                                                            style="width: 83px;">Bidang Usaha</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1"
+                                                                            aria-label="Ship to: activate to sort column ascending"
+                                                                            style="width: 63px;">Kontak Person</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1"
+                                                                            aria-label="Ship to: activate to sort column ascending"
+                                                                            style="width: 63px;">Email</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1"
+                                                                            aria-label="Ship to: activate to sort column ascending"
+                                                                            style="width: 63px;">Telepon</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1"
+                                                                            aria-label="Base Price: activate to sort column ascending"
+                                                                            style="width: 90px;">Alamat Web</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1"
+                                                                            aria-label="Actions: activate to sort column ascending"
+                                                                            style="width: 70px;">Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="sorting_1">1</td>
+                                                                        <td>Tokopedia</td>
+                                                                        <td>E-Commerce</td>
+                                                                        <td>08111231231</td>
+                                                                        <td>contact@tokopedia.com</td>
+                                                                        <td>(021)54734344</td>
+                                                                        <td>https://tokopedia.com</td>
+                                                                        <td colspan="2">
+                                                                            <div class="row">
+                                                                                <a
+                                                                                    class="btn badge badge-success mt-1 text-white">Detail</a>
+                                                                                <a href="form-edit-mitra.html"
+                                                                                    class="btn badge badge-warning ml-1 mt-1 text-white">Edit</a>
+                                                                                <a
+                                                                                    class="btn badge badge-danger ml-1 mt-1 text-white">Delete</a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="sorting_1">2</td>
+                                                                        <td>PT Karya Anak Bangsa</td>
+                                                                        <td>Telekomunikasi dan Teknologi Informasi</td>
+                                                                        <td>08213443551</td>
+                                                                        <td>contact@gojek.com</td>
+                                                                        <td>(021)1178522</td>
+                                                                        <td>https://gojek.com</td>
+                                                                        <td colspan="2">
+                                                                            <div class="row">
+                                                                                <a
+                                                                                    class="btn badge badge-success mt-1 text-white">Detail</a>
+                                                                                <a href="form-edit-mitra.html"
+                                                                                    class="btn badge badge-warning ml-1 mt-1 text-white">Edit</a>
+                                                                                <a
+                                                                                    class="btn badge badge-danger ml-1 mt-1 text-white">Delete</a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr role="row" class="odd">
+                                                                        <td class="sorting_1">3</td>
+                                                                        <td>Telkomsiaga</td>
+                                                                        <td>Telekomunikasi dan Teknologi Informasi</td>
+                                                                        <td>08925225577</td>
+                                                                        <td>contact@gojek.com</td>
+                                                                        <td>(021)56732342</td>
+                                                                        <td>https://telkomsiaga.co.id</td>
+                                                                        <td colspan="2">
+                                                                            <div class="row">
+                                                                                <a
+                                                                                    class="btn badge badge-success mt-1 text-white">Detail</a>
+                                                                                <a href="form-edit-mitra.html"
+                                                                                    class="btn badge badge-warning ml-1 mt-1 text-white">Edit</a>
+                                                                                <a
+                                                                                    class="btn badge badge-danger ml-1 mt-1 text-white">Delete</a>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="dataTables_info" id="order-listing_info"
+                                                                role="status" aria-live="polite">Showing 1 to 10 of 10
+                                                                entries</div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <div class="dataTables_paginate paging_simple_numbers"
+                                                                id="order-listing_paginate">
+                                                                <ul class="pagination">
+                                                                    <li class="paginate_button page-item previous disabled"
+                                                                        id="order-listing_previous"><a href="#"
+                                                                            aria-controls="order-listing"
+                                                                            data-dt-idx="0" tabindex="0"
+                                                                            class="page-link">Previous</a></li>
+                                                                    <li class="paginate_button page-item active"><a
+                                                                            href="#" aria-controls="order-listing"
+                                                                            data-dt-idx="1" tabindex="0"
+                                                                            class="page-link">1</a></li>
+                                                                    <li class="paginate_button page-item next disabled"
+                                                                        id="order-listing_next"><a href="#"
+                                                                            aria-controls="order-listing"
+                                                                            data-dt-idx="2" tabindex="0"
+                                                                            class="page-link">Next</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="w-100 clearfix">
+                        <span class="text-muted text-center text-sm-left">Develop by Mahasiswa STT-NF © 2021</span>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <!-- plugins:js -->
+    <script src="../vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../vendors/chart.js/Chart.min.js"></script>
+    <script src="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../js/off-canvas.js"></script>
+    <script src="../js/hoverable-collapse.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/todolist.js"></script>
+    <!-- End custom js for this page-->
+    <script>
+        $(document).ready(function () {
+            $('#datepicker-popup').datepicker({
+                enableOnReadonly: true,
+                todayHighlight: true,
+                format: 'DD, d MM yyyy'
+            });
+
+            // Simpan ke local storage browser
+            $('.kategori').change(function () {
+                var kategori = [];
+                $.each($("input[name='kategori[]']:checked"), function () {
+                    kategori.push($(this).val());
+                });
+                kategori = kategori.join(", ");
+                localStorage.setItem('kategori', kategori);
+            });
+            $('#form-lowongan').submit(function () {
+                localStorage.setItem('nama', $("input[name='nama']").val());
+                localStorage.setItem('alamat', $("textarea[name='alamat']").val());
+                localStorage.setItem('bidang', $("select[name='bidang']").val());
+                localStorage.setItem('deskripsi', $("textarea[name='deskripsi']").val());
+                localStorage.setItem('deskripsi_kualifikasi', $("textarea[name='deskripsi_kualifikasi']").val());
+                localStorage.setItem('tanggal', $("input[name='tanggal']").val());
+                localStorage.setItem('kontak', $("input[name='kontak']").val());
+                localStorage.setItem('email', $("input[name='email']").val());
+            });
+        });
+    </script>
+
+</body>
+
+</html>

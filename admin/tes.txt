@@ -1,0 +1,19 @@
+Ardelingga:
+form mitra ✅
+halaman login ✅
+admin kelola lowongan ✅
+admin kelola mitra ✅
+
+Ajeng :
+edit lowongan kerja ✅
+edit mitra kerja (nunggu form mitranya ardelingga dulu)
+form isi berita
+daftar berita (berita 2,3,4) ✅
+
+
+MENU ADMIN
+- Home
+- Kelola Loker
+- Kelola Mitra
+- Kelola Berita
+- Logout

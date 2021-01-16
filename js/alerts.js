@@ -27,7 +27,7 @@
     } else if (type === 'success-message') {
       swal({
         title: 'Congratulations!',
-        text: 'You entered the correct answer',
+        text: 'Selamat datang di halaman Admin!',
         icon: 'success',
         button: {
           text: "Continue",
