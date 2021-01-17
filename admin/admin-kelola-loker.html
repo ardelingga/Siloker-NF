@@ -37,8 +37,8 @@
                         <i class="mdi mdi-magnify"></i>
                       </span>
                     </div>
-                    <input type="text" name="keyword" class="form-control" placeholder="Search"
-                    aria-label="search" aria-describedby="search">
+                    <input type="text" name="keyword" class="form-control" placeholder="Search" aria-label="search"
+                      aria-describedby="search">
                     <input type="submit" style="display: none;">
                   </div>
                 </form>
@@ -47,6 +47,7 @@
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
               <h3 class="font-weight-bold text-white mb-0">SILOKERNF</h3>
             </div>
+
             <ul class="navbar-nav ml-lg-5 navbar-nav-right">
               <li class="nav-item nav-profile dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
@@ -117,158 +118,134 @@
                   <div class="row">
                     <div class="col-12">
                       <div class="table-responsive">
-                        <div id="order-listing_wrapper"
-                        class="dataTables_wrapper dt-bootstrap4 no-footer">
+                        <div id="order-listing_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                          <div class="mb-3 d-flex justify-content-end">
+                            <a href="loker.html" class="btn btn-success btn-rounded"> + Tambah Loker</a>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <table id="order-listing" class="table dataTable no-footer" role="grid"
+                                aria-describedby="order-listing_info">
+                                <thead>
+                                  <tr role="row">
+                                    <th class="sorting_asc" tabindex="0" aria-controls="order-listing" rowspan="1"
+                                      colspan="1" aria-sort="ascending"
+                                      aria-label="Order #: activate to sort column descending" style="width: 65px;">No
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1"
+                                      colspan="1" aria-label="Purchased On: activate to sort column ascending"
+                                      style="width: 115px;">Tanggal</th>
+                                    <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1"
+                                      colspan="1" aria-label="Customer: activate to sort column ascending"
+                                      style="width: 83px;">Nama Perusahaan</th>
+                                    <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1"
+                                      colspan="1" aria-label="Ship to: activate to sort column ascending"
+                                      style="width: 63px;">Kontak Person</th>
+                                    <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1"
+                                      colspan="1" aria-label="Ship to: activate to sort column ascending"
+                                      style="width: 63px;">Email</th>
+                                    <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1"
+                                      colspan="1" aria-label="Base Price: activate to sort column ascending"
+                                      style="width: 90px;">Deskripsi Lowongan</th>
+                                    <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1"
+                                      colspan="1" aria-label="Actions: activate to sort column ascending"
+                                      style="width: 70px;">Actions</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
 
-                        <div class="row">
-                          <div class="col-sm-12">
-                            <table id="order-listing" class="table dataTable no-footer"
-                            role="grid" aria-describedby="order-listing_info">
-                            <thead>
-                              <tr role="row">
-                                <th class="sorting_asc" tabindex="0"
-                                aria-controls="order-listing" rowspan="1"
-                                colspan="1" aria-sort="ascending"
-                                aria-label="Order #: activate to sort column descending"
-                                style="width: 65px;">No</th>
-                                <th class="sorting" tabindex="0"
-                                aria-controls="order-listing" rowspan="1"
-                                colspan="1"
-                                aria-label="Purchased On: activate to sort column ascending"
-                                style="width: 115px;">Tanggal</th>
-                                <th class="sorting" tabindex="0"
-                                aria-controls="order-listing" rowspan="1"
-                                colspan="1"
-                                aria-label="Customer: activate to sort column ascending"
-                                style="width: 83px;">Nama Perusahaan</th>
-                                <th class="sorting" tabindex="0"
-                                aria-controls="order-listing" rowspan="1"
-                                colspan="1"
-                                aria-label="Ship to: activate to sort column ascending"
-                                style="width: 63px;">Kontak Person</th>
-                                <th class="sorting" tabindex="0"
-                                aria-controls="order-listing" rowspan="1"
-                                colspan="1"
-                                aria-label="Ship to: activate to sort column ascending"
-                                style="width: 63px;">Email</th>
-                                <th class="sorting" tabindex="0"
-                                aria-controls="order-listing" rowspan="1"
-                                colspan="1"
-                                aria-label="Base Price: activate to sort column ascending"
-                                style="width: 90px;">Deskripsi Lowongan</th>
-                                <th class="sorting" tabindex="0"
-                                aria-controls="order-listing" rowspan="1"
-                                colspan="1"
-                                aria-label="Actions: activate to sort column ascending"
-                                style="width: 70px;">Actions</th>
-                              </tr>
-                            </thead>
-                            <tbody>
+                                  <tr role="row" class="odd">
+                                    <td class="sorting_1">1</td>
+                                    <td>2021/01/20</td>
+                                    <td>PT Bank Central Asia Tbk (BCA)</td>
+                                    <td>0811123123321</td>
+                                    <td>bankcentralasia@gmail.com</td>
+                                    <td>Network Enginer</td>
+                                    <td colspan="2">
+                                      <div class="row">
+                                        <a class="btn badge badge-success mt-1 text-white">Detail</a>
+                                        <a href="edit-loker.html"
+                                          class="btn badge badge-warning ml-1 mt-1 text-white">Edit</a>
+                                        <a class="btn badge badge-danger ml-1 mt-1 text-white">Delete</a>
+                                      </div>
+                                    </td>
+                                  </tr>
 
-                              <tr role="row" class="odd">
-                                <td class="sorting_1">1</td>
-                                <td>2021/01/20</td>
-                                <td>PT Bank Central Asia Tbk (BCA)</td>
-                                <td>0811123123321</td>
-                                <td>bankcentralasia@gmail.com</td>
-                                <td>Network Enginer</td>
-                                <td colspan="2">
-                                  <div class="row">
-                                    <a
-                                    class="btn badge badge-success mt-1 text-white">Detail</a>
-                                    <a href="edit-loker.html"
-                                    class="btn badge badge-warning ml-1 mt-1 text-white">Edit</a>
-                                    <a
-                                    class="btn badge badge-danger ml-1 mt-1 text-white">Delete</a>
-                                  </div>
-                                </td>
-                              </tr>
+                                  <tr role="row" class="odd">
+                                    <td class="sorting_1">2</td>
+                                    <td>2021/01/22</td>
+                                    <td>PT Astra Internasional</td>
+                                    <td>0811321321122</td>
+                                    <td>astra@gmail.com</td>
+                                    <td>Android Developer</td>
+                                    <td colspan="2">
+                                      <div class="row">
+                                        <a class="btn badge badge-success mt-1 text-white">Detail</a>
+                                        <a href="edit-loker.html"
+                                          class="btn badge badge-warning ml-1 mt-1 text-white">Edit</a>
+                                        <a class="btn badge badge-danger ml-1 mt-1 text-white">Delete</a>
+                                      </div>
+                                    </td>
+                                  </tr>
 
-                              <tr role="row" class="odd">
-                                <td class="sorting_1">2</td>
-                                <td>2021/01/22</td>
-                                <td>PT Astra Internasional</td>
-                                <td>0811321321122</td>
-                                <td>astra@gmail.com</td>
-                                <td>Android Developer</td>
-                                <td colspan="2">
-                                  <div class="row">
-                                    <a
-                                    class="btn badge badge-success mt-1 text-white">Detail</a>
-                                    <a href="edit-loker.html"
-                                    class="btn badge badge-warning ml-1 mt-1 text-white">Edit</a>
-                                    <a
-                                    class="btn badge badge-danger ml-1 mt-1 text-white">Delete</a>
-                                  </div>
-                                </td>
-                              </tr>
+                                  <tr role="row" class="odd">
+                                    <td class="sorting_1">3</td>
+                                    <td>2021/01/24</td>
+                                    <td>PT Indocement Tunggal Perkasa Tbk</td>
+                                    <td>0822234234432</td>
+                                    <td>indocement@gmail.com</td>
+                                    <td>Front End Developer</td>
+                                    <td colspan="2">
+                                      <div class="row">
+                                        <a class="btn badge badge-success mt-1 text-white">Detail</a>
+                                        <a href="edit-loker.html"
+                                          class="btn badge badge-warning ml-1 mt-1 text-white">Edit</a>
+                                        <a class="btn badge badge-danger ml-1 mt-1 text-white">Delete</a>
+                                      </div>
+                                    </td>
+                                  </tr>
 
-                              <tr role="row" class="odd">
-                                <td class="sorting_1">3</td>
-                                <td>2021/01/24</td>
-                                <td>PT Indocement Tunggal Perkasa Tbk</td>
-                                <td>0822234234432</td>
-                                <td>indocement@gmail.com</td>
-                                <td>Front End Developer</td>
-                                <td colspan="2">
-                                  <div class="row">
-                                    <a
-                                    class="btn badge badge-success mt-1 text-white">Detail</a>
-                                    <a href="edit-loker.html"
-                                    class="btn badge badge-warning ml-1 mt-1 text-white">Edit</a>
-                                    <a
-                                    class="btn badge badge-danger ml-1 mt-1 text-white">Delete</a>
-                                  </div>
-                                </td>
-                              </tr>
-
-                              <tr role="row" class="odd">
-                                <td class="sorting_1">4</td>
-                                <td>2021/01/24</td>
-                                <td>PT Indofod Sukses Makmur Tbk</td>
-                                <td>0844557557574</td>
-                                <td>indofood@gmail.com</td>
-                                <td>Beck End Developer</td>
-                                <td colspan="2">
-                                  <div class="row">
-                                    <a
-                                    class="btn badge badge-success mt-1 text-white">Detail</a>
-                                    <a href="edit-loker.html"
-                                    class="btn badge badge-warning ml-1 mt-1 text-white">Edit</a>
-                                    <a
-                                    class="btn badge badge-danger ml-1 mt-1 text-white">Delete</a>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-12 col-md-5">
-                          <div class="dataTables_info" id="order-listing_info"
-                          role="status" aria-live="polite">Showing 1 to 10 of 10
-                        entries</div>
-                      </div>
-                      <div class="col-sm-12 col-md-7">
-                        <div class="dataTables_paginate paging_simple_numbers"
-                        id="order-listing_paginate">
-                        <ul class="pagination">
-                          <li class="paginate_button page-item previous disabled"
-                          id="order-listing_previous"><a href="#"
-                          aria-controls="order-listing"
-                          data-dt-idx="0" tabindex="0"
-                          class="page-link">Previous</a></li>
-                          <li class="paginate_button page-item active"><a
-                            href="#" aria-controls="order-listing"
-                            data-dt-idx="1" tabindex="0"
-                            class="page-link">1</a></li>
-                            <li class="paginate_button page-item next disabled"
-                            id="order-listing_next"><a href="#"
-                            aria-controls="order-listing"
-                            data-dt-idx="2" tabindex="0"
-                            class="page-link">Next</a></li>
-                          </ul>
+                                  <tr role="row" class="odd">
+                                    <td class="sorting_1">4</td>
+                                    <td>2021/01/24</td>
+                                    <td>PT Indofod Sukses Makmur Tbk</td>
+                                    <td>0844557557574</td>
+                                    <td>indofood@gmail.com</td>
+                                    <td>Beck End Developer</td>
+                                    <td colspan="2">
+                                      <div class="row">
+                                        <a class="btn badge badge-success mt-1 text-white">Detail</a>
+                                        <a href="edit-loker.html"
+                                          class="btn badge badge-warning ml-1 mt-1 text-white">Edit</a>
+                                        <a class="btn badge badge-danger ml-1 mt-1 text-white">Delete</a>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-12 col-md-5">
+                              <div class="dataTables_info" id="order-listing_info" role="status" aria-live="polite">
+                                Showing 1 to 10 of 10
+                                entries</div>
+                            </div>
+                            <div class="col-sm-12 col-md-7">
+                              <div class="dataTables_paginate paging_simple_numbers" id="order-listing_paginate">
+                                <ul class="pagination">
+                                  <li class="paginate_button page-item previous disabled" id="order-listing_previous"><a
+                                      href="#" aria-controls="order-listing" data-dt-idx="0" tabindex="0"
+                                      class="page-link">Previous</a></li>
+                                  <li class="paginate_button page-item active"><a href="#" aria-controls="order-listing"
+                                      data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                  <li class="paginate_button page-item next disabled" id="order-listing_next"><a
+                                      href="#" aria-controls="order-listing" data-dt-idx="2" tabindex="0"
+                                      class="page-link">Next</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -278,42 +255,39 @@
             </div>
           </div>
         </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="w-100 clearfix">
+            <span class="text-muted text-center text-sm-left">Develop by Mahasiswa STT-NF © 2021</span>
+          </div>
+        </footer>
+        <!-- partial -->
       </div>
+      <!-- main-panel ends -->
     </div>
+    <!-- page-body-wrapper ends -->
   </div>
-  <!-- content-wrapper ends -->
-  <!-- partial:partials/_footer.html -->
-  <footer class="footer">
-    <div class="w-100 clearfix">
-      <span class="text-muted text-center text-sm-left">Develop by Mahasiswa STT-NF © 2021</span>
-    </div>
-  </footer>
-  <!-- partial -->
-</div>
-<!-- main-panel ends -->
-</div>
-<!-- page-body-wrapper ends -->
-</div>
-<!-- container-scroller -->
+  <!-- container-scroller -->
 
-<!-- plugins:js -->
-<script src="../vendors/js/vendor.bundle.base.js"></script>
-<!-- endinject -->
-<!-- Plugin js for this page -->
-<script src="../vendors/chart.js/Chart.min.js"></script>
-<script src="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-<!-- End plugin js for this page -->
-<!-- inject:js -->
-<script src="../js/off-canvas.js"></script>
-<script src="../js/hoverable-collapse.js"></script>
-<script src="../js/template.js"></script>
-<script src="../js/settings.js"></script>
-<script src="../js/todolist.js"></script>
-<!-- endinject -->
-<!-- Custom js for this page-->
-<script src="../js/dashboard.js"></script>
-<script src="../js/todolist.js"></script>
-<!-- End custom js for this page-->
+  <!-- plugins:js -->
+  <script src="../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../vendors/chart.js/Chart.min.js"></script>
+  <script src="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../js/off-canvas.js"></script>
+  <script src="../js/hoverable-collapse.js"></script>
+  <script src="../js/template.js"></script>
+  <script src="../js/settings.js"></script>
+  <script src="../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/todolist.js"></script>
+  <!-- End custom js for this page-->
 
 </body>
 

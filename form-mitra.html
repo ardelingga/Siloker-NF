@@ -122,14 +122,15 @@
                                             <label for="nama" class="col-sm-3 col-form-label">Nama
                                                 Perushaan/Organisasi</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="nama" name="nama"
-                                                    placeholder="Nama Perushaan/Organisasi" required autofocus />
+                                                <input id="input-nama" type="text" class="form-control" id="nama"
+                                                    name="nama" placeholder="Nama Perushaan/Organisasi" required
+                                                    autofocus />
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="bidang" class="col-sm-3 col-form-label">Bidang Usaha</label>
                                             <div class="col-sm-9">
-                                                <select class="form-control" id="bidang" name="bidang" required>
+                                                <select class="form-control" id="select-bidang" name="bidang" required>
                                                     <option value="">Pilih bidang usaha</option>
                                                     <option value="Perbankan">Perbankan</option>
                                                     <option value="Rumah Sakit">Rumah Sakit</option>
@@ -148,8 +149,8 @@
                                         <div class="form-group row">
                                             <label for="alamat" class="col-sm-3 col-form-label">Alamat Kantor</label>
                                             <div class="col-sm-9">
-                                                <textarea class="form-control" placeholder="Alamat Kantor" id="alamat"
-                                                    name="alamat" rows="4" required></textarea>
+                                                <textarea class="form-control" placeholder="Alamat Kantor"
+                                                    id="input-alamat" name="alamat" rows="4" required></textarea>
                                             </div>
                                         </div>
                                         <!-- <div class="form-group row">
@@ -219,34 +220,35 @@
                                         <div class="form-group row">
                                             <label for="kontak" class="col-sm-3 col-form-label">Kontak Person</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="kontak" name="kontak"
+                                                <input type="number" class="form-control" id="input-kontak" name="kontak"
                                                     placeholder="Kontak Person" required />
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="kontak" class="col-sm-3 col-form-label">No Hp / Telepon</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="kontak" name="kontak"
+                                                <input type="number" class="form-control" id="input-nohp" name="kontak"
                                                     placeholder="No Hp / Telepon" required />
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label for="email" class="col-sm-3 col-form-label">Email</label>
                                             <div class="col-sm-9">
-                                                <input type="email" class="form-control" id="email" name="email"
+                                                <input type="email" class="form-control" id="input-email" name="email"
                                                     placeholder="Email" required />
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="email" class="col-sm-3 col-form-label">Alamat Web</label>
+                                            <label for="text" class="col-sm-3 col-form-label">Alamat Web</label>
                                             <div class="col-sm-9">
-                                                <input type="email" value="http://" class="form-control" id="email"
-                                                    name="email" placeholder="Alamat Web" required />
+                                                <input type="text" value="http://" class="form-control"
+                                                    id="input-alamat-web" name="email" placeholder="Alamat Web"
+                                                    required />
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-sm-9 offset-sm-3">
-                                                <a href="mitra.html" class="btn btn-primary mr-2">
+                                                <a id="btn-daftar-mitra" href="#" class="btn btn-primary mr-2">
                                                     Daftar
                                                 </a>
                                                 <a href="mitra.html" class="btn btn-light">Batal</a>
@@ -293,6 +295,34 @@
     <!-- End custom js for this page-->
     <script>
         $(document).ready(function () {
+            $("#btn-daftar-mitra").click(function () {
+                var nama_perusahaan = $('#input-nama').val();
+                var bidang_usaha = $('#select-bidang').val();
+                var alamat = $('#input-alamat').val();
+                var kontak = $('#input-kontak').val();
+                var no_hp = $('#input-nohp').val();
+                var email = $('#input-email').val();
+                var alamat_web = $('#input-alamat-web').val();
+
+                if (nama_perusahaan == "") {
+                    alert('Masukan Nama Perusahaan!');
+                } else if (bidang_usaha == "") {
+                    alert('Pilih bidang Usaha');
+                } else if (alamat == "") {
+                    alert('Masukan alamat');
+                } else if (kontak == "") {
+                    alert('Masukan Kontak');
+                } else if (no_hp == "") {
+                    alert('Masukan no hp');
+                } else if (email == "") {
+                    alert('Masukan email');
+                } else if (alamat_web == "") {
+                    alert('Masukan alamat web');
+                } else {
+                    window.location.href = 'mitra.html';
+                }
+            });
+
             $("#datepicker-popup").datepicker({
                 enableOnReadonly: true,
                 todayHighlight: true,
