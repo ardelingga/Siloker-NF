@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>SILOKERNF &#8211; Form Menjadi Mitra</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="../vendors/mdi/css/materialdesignicons.min.css" />
-    <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" />
-    <link rel="stylesheet" href="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" />
     <!-- End plugin css for this page -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="../css/horizontal-layout/style.css" />
-    <script src="../js/custom.js"></script>
+    <link rel="stylesheet" href="css/horizontal-layout/style.css" />
+    <script src="js/custom.js"></script>
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -64,27 +64,33 @@
             <nav class="bottom-navbar">
                 <div class="container">
                     <ul class="nav page-navigation">
-        <li class="nav-item">
-          <a class="nav-link h-100" href="index.html">
-            <span class="menu-title">Home</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h-100" href="admin-kelola-loker.html">
-            <span class="menu-title">Kelola Loker</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h-100" href="admin-kelola-mitra.html">
-            <span class="menu-title">Kelola Mitra</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h-100" href="form-berita.html">
-            <span class="menu-title">Kelola Berita</span>
-          </a>
-        </li>
-      </ul>
+                        <li class="nav-item">
+                            <a class="nav-link h-100" href="index.html">
+                                <!-- <i class="mdi mdi-view-dashboard-outline menu-icon"></i> -->
+                                <span class="menu-title">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link h-100" href="lowongan.html">
+                                <span class="menu-title">Lowongan Baru</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link h-100" href="loker.html">
+                                <span class="menu-title">Isi Loker</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link h-100" href="mitra.html">
+                                <span class="menu-title">Daftar Mitra</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link h-100" href="berita.html">
+                                <span class="menu-title">Berita</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -136,14 +142,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <!-- <div class="form-group row">
-                                            <label for="deskripsi" class="col-sm-3 col-form-label">Deskripsi
-                                                Lowongan</label>
-                                            <div class="col-sm-9">
-                                                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="4"
-                                                    required></textarea>
-                                            </div>
-                                        </div> -->
+      
                                         <div class="form-group row">
                                             <label for="alamat" class="col-sm-3 col-form-label">Alamat Kantor</label>
                                             <div class="col-sm-9">
@@ -151,69 +150,6 @@
                                                     name="alamat" rows="4" required></textarea>
                                             </div>
                                         </div>
-                                        <!-- <div class="form-group row">
-                                            <label for="deskripsi_kualifikasi" class="col-sm-3 col-form-label">Deskripsi
-                                                Kualifikasi Lowongan</label>
-                                            <div class="col-sm-9">
-                                                <textarea class="form-control" id="deskripsi_kualifikasi"
-                                                    name="deskripsi_kualifikasi" rows="4"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="kontak" class="col-sm-3 col-form-label">Kategori
-                                                Lowongan</label>
-                                            <div class="col-sm-2">
-                                                <div class="form-check form-check-secondary">
-                                                    <label class="form-check-label">
-                                                        <input type="checkbox" id="kategori" name="kategori[]"
-                                                            value="Programmer" class="form-check-input kategori"
-                                                            required />
-                                                        Programmer
-                                                        <i class="input-helper"></i></label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="form-check form-check-secondary">
-                                                    <label class="form-check-label">
-                                                        <input type="checkbox" id="kategori" name="kategori[]"
-                                                            value="Network & Infrastructure"
-                                                            class="form-check-input kategori" required />
-                                                        Network & Infrastructure
-                                                        <i class="input-helper"></i></label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2">
-                                                <div class="form-check form-check-secondary">
-                                                    <label class="form-check-label">
-                                                        <input type="checkbox" id="kategori" name="kategori[]"
-                                                            value="Analys" class="form-check-input kategori" />
-                                                        Analys
-                                                        <i class="input-helper"></i></label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-2">
-                                                <div class="form-check form-check-secondary">
-                                                    <label class="form-check-label">
-                                                        <input type="checkbox" id="kategori" name="kategori[]"
-                                                            value="Data Science" class="form-check-input kategori" />
-                                                        Data Science
-                                                        <i class="input-helper"></i></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="kontak" class="col-sm-3 col-form-label">Tanggal Dateline</label>
-                                            <div class="col-sm-9">
-                                                <div id="datepicker-popup" class="input-group date datepicker">
-                                                    <input type="text" class="form-control" name="tanggal"
-                                                        placeholder="mm/dd/yyyy" id="tanggal" autocomplete="off"
-                                                        required />
-                                                    <span class="input-group-addon input-group-append border-left">
-                                                        <span class="mdi mdi-calendar input-group-text"></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div> -->
 
                                         <div class="form-group row">
                                             <label for="kontak" class="col-sm-3 col-form-label">Kontak Person</label>
@@ -273,22 +209,22 @@
     <!-- container-scroller -->
 
     <!-- plugins:js -->
-    <script src="../vendors/js/vendor.bundle.base.js"></script>
+    <script src="vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="../vendors/chart.js/Chart.min.js"></script>
-    <script src="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="vendors/chart.js/Chart.min.js"></script>
+    <script src="vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="../js/off-canvas.js"></script>
-    <script src="../js/hoverable-collapse.js"></script>
-    <script src="../js/template.js"></script>
-    <script src="../js/settings.js"></script>
-    <script src="../js/todolist.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
-    <script src="../js/dashboard.js"></script>
-    <script src="../js/todolist.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/todolist.js"></script>
     <!-- End custom js for this page-->
     <script>
         $(document).ready(function () {
