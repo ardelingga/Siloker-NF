@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>SILOKERNF &#8211; Form Menjadi Mitra</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="../vendors/mdi/css/materialdesignicons.min.css" />
-    <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" />
-    <link rel="stylesheet" href="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" />
     <!-- End plugin css for this page -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="../css/horizontal-layout/style.css" />
-    <script src="../js/custom.js"></script>
+    <link rel="stylesheet" href="css/horizontal-layout/style.css" />
+    <script src="js/custom.js"></script>
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -64,27 +64,33 @@
             <nav class="bottom-navbar">
                 <div class="container">
                     <ul class="nav page-navigation">
-        <li class="nav-item">
-          <a class="nav-link h-100" href="index.html">
-            <span class="menu-title">Home</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h-100" href="admin-kelola-loker.html">
-            <span class="menu-title">Kelola Loker</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h-100" href="admin-kelola-mitra.html">
-            <span class="menu-title">Kelola Mitra</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link h-100" href="form-berita.html">
-            <span class="menu-title">Kelola Berita</span>
-          </a>
-        </li>
-      </ul>
+                        <li class="nav-item">
+                            <a class="nav-link h-100" href="index.html">
+                                <!-- <i class="mdi mdi-view-dashboard-outline menu-icon"></i> -->
+                                <span class="menu-title">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link h-100" href="lowongan.html">
+                                <span class="menu-title">Lowongan Baru</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link h-100" href="loker.html">
+                                <span class="menu-title">Isi Loker</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link h-100" href="mitra.html">
+                                <span class="menu-title">Daftar Mitra</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link h-100" href="berita.html">
+                                <span class="menu-title">Berita</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -116,7 +122,7 @@
                                         Isi data perusahaan-mu dan gabung menjadi bagian dari
                                         mitra kami.
                                     </p>
-                                    <form class="forms-sample" action="lowongan.html" id="form-lowongan" method="POST">
+                                    <form class="forms-sample" action="lowongan.html" id="form-lowongan" method="POST" onSubmit="validasi()">
                                         <div class="form-group row">
                                             <label for="nama" class="col-sm-3 col-form-label">Nama
                                                 Perushaan/Organisasi</label>
@@ -203,22 +209,22 @@
     <!-- container-scroller -->
 
     <!-- plugins:js -->
-    <script src="../vendors/js/vendor.bundle.base.js"></script>
+    <script src="vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="../vendors/chart.js/Chart.min.js"></script>
-    <script src="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="vendors/chart.js/Chart.min.js"></script>
+    <script src="vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="../js/off-canvas.js"></script>
-    <script src="../js/hoverable-collapse.js"></script>
-    <script src="../js/template.js"></script>
-    <script src="../js/settings.js"></script>
-    <script src="../js/todolist.js"></script>
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/todolist.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
-    <script src="../js/dashboard.js"></script>
-    <script src="../js/todolist.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/todolist.js"></script>
     <!-- End custom js for this page-->
     <script>
         $(document).ready(function () {
@@ -254,6 +260,19 @@
                 localStorage.setItem("email", $("input[name='email']").val());
             });
         });
+
+        function validasi() {
+              var nama = document.getElementById("nama").value;
+              var bidang = document.getElementById("bidang").value;
+              var alamat = document.getElementById("alamat").value;
+              var kontak = document.getElementById("kontak").value;
+              var email = document.getElementById("email").value;
+              if (nama != "" && bidang !="" && alamat !="" && kontak !="" && email!="") {
+                return true;
+              }else{
+                alert('Anda harus mengisi data dengan lengkap !');
+              }
+        }
     </script>
 </body>
 
