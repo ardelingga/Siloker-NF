@@ -107,7 +107,7 @@
                 <div class="card-body">
                   <h4>Form Isi Loker</h4>
                   <p class="card-description">Isi penawaran lowongan kerja Anda.</p>
-                  <form class="forms-sample" action="lowongan.html" id="form-lowongan" method="POST">
+                  <form class="forms-sample" action="lowongan.html" id="form-lowongan" method="POST"  onSubmit="validasi()">
                     <div class="form-group row">
                       <label for="nama" class="col-sm-3 col-form-label">Nama Perushaan/Organisasi</label>
                       <div class="col-sm-9">
@@ -279,7 +279,25 @@
                 localStorage.setItem('kontak', $("input[name='kontak']").val());
                 localStorage.setItem('email', $("input[name='email']").val());
               });
+                          
             });
+            function validasi() {
+              var nama = document.getElementById("nama").value;
+              var bidang = document.getElementById("bidang").value;
+              var deskripsi = document.getElementById("deskripsi").value;
+              var alamat = document.getElementById("alamat").value;
+              var deskripsi_kualifikasi = document.getElementById("deskripsi_kualifikasi").value;
+              var kategori = document.getElementById("kategori").value;
+              var tanggal = document.getElementById("tanggal").value;
+              var kontak = document.getElementById("kontak").value;
+              var email = document.getElementById("email").value;
+
+              if (nama != "" && bidang !="" && deskripsi !="" && alamat !="" && deskripsi_kualifikasi !="" && kategori !="" && tanggal !="" && kontak !="" && email!="") {
+                return true;
+              }else{
+                alert('Anda harus mengisi data dengan lengkap !');
+              }
+            }
           </script>
 
         </body>
